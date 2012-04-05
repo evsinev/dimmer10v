@@ -1,3 +1,5 @@
+#define STM32F10X_LD_VL 1
+
 #include "stm32f10x.h"
 
 unsigned char flag=0;
@@ -9,8 +11,9 @@ uint32_t theBuf[256];
 volatile int theTicker = 0;
 volatile int theCurrentValue = 100;
 
-void TIM6_DAC_IRQHandler(void)
-{ 
+
+void TIM6_DAC_IRQHandler(void) {
+
   if(TIM6->SR & TIM_SR_UIF)   {
     TIM6->SR &= ~TIM_SR_UIF;     //сбросить флаг
     theTicker++;

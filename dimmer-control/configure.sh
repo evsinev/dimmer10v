@@ -21,4 +21,4 @@ param_add STM32_CHIP_TYPE           LD_VL
 rm -fr ./target
 mkdir -p ./target
 cd ./target
-cmake $P ..
+cmake $P -G "Eclipse CDT4 - Unix Makefiles" ..

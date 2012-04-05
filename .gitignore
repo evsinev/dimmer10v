@@ -8,3 +8,4 @@ target/
 *~
 .idea
 
+/dimmer-control/nbproject/private/
